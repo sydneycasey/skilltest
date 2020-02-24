@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>WHCC Hacker News Reader</title>
+    <script type="text/javascript">
+        function getStories() {
+            fetch('https://hacker-news.firebaseio.com/v0/newstories.json')
+                .then((response) => {
+                    return response.json();
+                })
+                .then((myJson) => {
+                    document.getElementById("stories").innerHTML = myJson;
+                });
+        }
+        getStories();
+    </script>
+</head>
+<body>
+    <h1>WHCC Hacker News Reader</h1>
+    <div id="stories"></div>
+</body>
+</html>
