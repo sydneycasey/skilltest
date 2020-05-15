@@ -17,6 +17,10 @@ Try to timebox your work to approximately 1-2 hours.
 1. The app should support infinite scrolling. When a user reaches the bottom of the page it should load more stories.
 1. The app should look good, please style it to the best of your ability and ensure it looks good on a mobile device.
 
+# Core Values of Design
+1. Simplicity in the user experience and aesthetic.
+1. Focus on and care for the user’s experience.
+
 # Resources
 1. Hacker News API: https://github.com/HackerNews/Api
 1. Hacker News: https://news.ycombinator.com/news
