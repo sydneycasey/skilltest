@@ -18,7 +18,7 @@ Try to timebox your work to approximately 1-2 hours.
 1. The app should be appealing to users on both desktop and mobile, please style it to the best of your ability.
 
 # Core Values of Design
-1. Simplicity in the user experience and aesthetic.
+1. Polsihed simplicity in the user experience and aesthetic.
 1. Focus on empathy for the user’s experience.
 
 # Resources
