@@ -15,11 +15,11 @@ Try to timebox your work to approximately 1-2 hours.
 1. Each story list item should show the title, the author's name, and the time it was posted.
 1. The users are very impatient so please display each story as soon as it is fetched.
 1. The app should support infinite scrolling. When a user reaches the bottom of the page it should load more stories.
-1. The app should look good, please style it to the best of your ability and ensure it looks good on a mobile device.
+1. The app should be appealing to users on both desktop and mobile, please style it to the best of your ability.
 
 # Core Values of Design
-1. Simplicity in the user experience and aesthetic.
-1. Focus on and care for the user’s experience.
+1. Polsihed simplicity in the user experience and aesthetic.
+1. Focus on empathy for the user’s experience.
 
 # Resources
 1. Hacker News API: https://github.com/HackerNews/Api
