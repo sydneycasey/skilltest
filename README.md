@@ -1,6 +1,6 @@
-# WHCC Developer Skill Test
+# WHCC Developer Demo
 Please create a private fork from this repo. 
-Please add https://github.com/jameswnelson to your repo as a collaborator when you're done.
+Please add your WHCC contact to the repo as a collaborator when you're done.
 
 # Description
 Complete this web-based news reader that leverages the Hacker News API.
