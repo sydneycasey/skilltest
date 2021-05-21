@@ -1,23 +1,55 @@
 <!DOCTYPE HTML>
 <html lang="en">
+    <style>
+        .page {height: 900px;}
+        </style>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>WHCC Hacker News Reader</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+
     <script type="text/javascript">
         function getStories() {
             fetch('https://hacker-news.firebaseio.com/v0/newstories.json')
-                .then((response) => {
-                    return response.json();
-                })
-                .then((myJson) => {
-                    document.getElementById("stories").innerHTML = myJson;
-                });
-        }
+            .then(response => { return response.json(); })
+            .then(myJson => {
+                Promise.all(myJson.map(id => {
+                    return fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`)
+                    .then(response => response.json())
+                    .then(story => {
+                        // convert unix timestamp
+                        let time = new Date(story.time).toLocaleTimeString("en-US")
+                        // display story title, author, and time posted
+                        document.getElementById("stories").innerHTML +=
+                            `<div id="story">
+                                <a id="title" href="${story.url}" target="_blank">${story.title}</a>
+                                <div id="info">
+                                    <p>By: ${story.by}  |  ${time}</p>
+                                </div>
+                            </div>`;
+                    });
+                }));
+            });
+        };
+        // got infinite scroll working, ran out of time trying to figure out
+        // whether to fetch older stories or only display a set amount of new stories at a time
+        const container = document.querySelector('#stories');
+        window.addEventListener('scroll',()=>{
+	        const {scrollHeight,scrollTop,clientHeight} = document.documentElement;
+	        if(scrollTop + clientHeight > scrollHeight - 5){
+		    getStories();
+	        }
+        });
+
         getStories();
     </script>
+
 </head>
 <body>
-    <h1>WHCC Hacker News Reader</h1>
+    <h1 id="header">WHCC Hacker News Reader</h1>
+    <h3 id="subheader">Latest Stories</h3>
     <div id="stories"></div>
 </body>
 </html>

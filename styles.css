@@ -1,0 +1,43 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#subheader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: .5px solid lightgray
+}
+
+#stories {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#story {
+  padding: 5px;
+  margin: 5px;
+}
+
+#title {
+  color: #ff6600;
+}
+
+#title:hover {
+  color: #9e3f00;
+}
+
+#title:visited {
+  color: #9e3f00;
+}
+
+#info {
+  font-size: 12px;
+}
